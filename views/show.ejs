@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include("./partials/head.ejs") %>
-<body>
+<body id="show-body">
     <% console.log(animal) %>
     <%- include("./partials/nav.ejs") %>
-    <h1><%= animal.species %></h1>
+    <h1 id="show-h1"><%= animal.species %></h1>
+    <h3 class="show-h3"> This animal is found in: <%= animal.location %></h3>
+    <h3 class="show-h3"> Extinction Status: <%= animal.extinct ? "This animal no longer exists" : "Keep them ALIVE!!! "%></h3>
+    <h3 class="show-h3"> Life Expectancy: <%= animal.lifeExpectancy %> years</h3>
     <a href="/animals/edit/<%= animal._id%>">Edit <%= animal.species %> </a>
-    <h3><%= animal.location %></h3>
 </body>
 </html>

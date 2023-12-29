@@ -1,4 +1,4 @@
-/****************** NEW PAGE ***************/
+ /***************** NEW PAGE **************/
 
 #newform {
     width: 50%;
@@ -6,19 +6,20 @@
 }
 
 fieldset {
-    border: 1px solid gray;
+    border: 10px solid gray;
     border-radius: 1rem;
     padding: 20px;
     margin: 20px 0;
+    font-size: 20px;
 }
 
 legend {
     padding: 0px 10px;
-    color: purple;
+    color: rgb(0, 128, 45);
 }
 
 label {
-    color: green;
+    color: rgb(0, 128, 45);
     display: block;
 }
 
@@ -32,14 +33,14 @@ input {
 
 input:focus {
     outline: 0;
-    border: 2px solid purple;
+    border: 5px solid rgba(199, 155, 43, 0.695);
 }
 
 input[type="submit"] {
     width: 100%;
     height: 50px;
-    background-color: orange;
-    box-shadow: 2px 2px lightgreen;
+    background-color: rgba(199, 155, 43, 0.695);
+    box-shadow: 2px 2px rgb(0, 128, 45);
     font-size: 1.3em;
     color: whitesmoke;
     border: 0px;
@@ -48,8 +49,8 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     cursor: pointer;
-    background-color: rgb(10, 189, 103);
-    box-shadow: 2px 2px lightsalmon;
+    background-color: rgb(0, 128, 45);
+    box-shadow: 2px 2px rgba(199, 155, 43, 0.695);
 }
 
 #new-body {
@@ -61,31 +62,55 @@ input[type="submit"]:hover {
 
 /****************** INDEX PAGE ***************/
 
+.index-h1 {
+    text-align: center;
+}
+nav {
+    display: flex
+}
+.nav-btn {
+    margin: auto;
+    padding: 1rem;
+    font-size: 20px;
+    box-shadow: 2px 2px 2px rgb(0, 128, 45);
+    border: none;
+    border-radius: 10px;
+}
+
+
+.nav-link {
+    text-decoration: none;
+}
+
 .animal-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
     justify-content: center;
     align-items: center;
+  
 }
 
 .animal {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     justify-content: center;
-    padding: 1rem
+    padding: 1rem;
 }
 
 .animal-species {
     text-decoration: none;
-    font-size: 1rem
+    font-size: 1rem;
+    font-size: 40px;
+    width: 30%;
 }
 
 .animal-species:hover {
     cursor: pointer;
-    color: green;
-    background-color: orange;
+    color: rgb(0, 128, 45);
+    /* background-color: rgba(199, 155, 43, 0.695); */
+    
 }
 
 .cta {
@@ -94,11 +119,29 @@ input[type="submit"]:hover {
 }
 
 #deleteform > input {
-    background-color: red;
+    background-color: rgba(199, 155, 43, 0.695);
     color: white;   
 }
 
 body {
     width: 80%;
-    margin: 0 auto
+    margin: 0 auto;
+    font-family: palatino;
+    color: rgb(0, 128, 45);
+    background-color: rgba(22, 47, 18, 0.335);
+} 
+
+.image-header {
+    background-image: url("https://i.pinimg.com/originals/43/11/ff/4311ff9d91ab67cf24450e8bfa02bd82.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+    padding-top: 200px;
+}
+
+/****************** SHOW ********************/
+
+#show-body {
+    text-align: center;
+    font-size: 30px;
 }

@@ -6,12 +6,14 @@
 
 
     <% console.log(animal) %>
-    <h1>Editing <%= animal.species%> </h1>
+    <h1>Editing: <%= animal.species%> </h1>
 
     <form action="/animals/<%= animal._id%>/?_method=PUT" method="post">
         Species: <input type="text" name="species" value="<%= animal.species%>">
         Location: <input type="text" name="location" value="<%= animal.location %>">
-        <input type="submit" value="Update Book">
+        Extinct: <input type="checkbox" name="extinct" <% if(animal.extinct=== true){ %> checked <% } %>>
+        Life Expectancy: <input type="number" name="lifeExpectancy" value="<%= animal.lifeExpectancy %>">
+        <input type="submit" value="Update Animal">
 
 </form> 
 </body>

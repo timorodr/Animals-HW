@@ -44,10 +44,10 @@ async function destroy(req, res) {
  }
 async function update(req, res) {
     try{// handle our checkbox
-        if(req.body.completed === "on")  {
-            req.body.completed = true
+        if(req.body.extinct === "on")  {
+            req.body.extinct = true
         } else {
-            req.body.completed = false
+            req.body.extinct = false
         }
         // Then find by id and update with the req.body
         // findByIdAndUpdate - id, data to update, options obj
@@ -66,12 +66,12 @@ async function update(req, res) {
 }
 async function create(req, res) {
     try {
-        if(req.body.completed === "on") {
+        if(req.body.extinct === "on") {
             //if checked
-            req.body.completed = true
+            req.body.extinct = true
         } else {
             // if not checked
-            req.body.completed = false
+            req.body.extinct = false
     
         }
         let newAnimal = await req.model.Animal.create(req.body)
