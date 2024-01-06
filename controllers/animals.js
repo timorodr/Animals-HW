@@ -2,8 +2,8 @@
 
 
 
-// No middleware - remove the req.model. infront of book
-// const book = require("../models/Book")
+// No middleware - remove the req.model. infront of animal
+// const animal = require("../models/Animal")
 // * EXPORT
 module.exports = {
     index,
@@ -32,7 +32,7 @@ async function newForm(req, res) {
 }
 async function destroy(req, res) {
     try {
-         // Find a book and then delete
+         // Find an animal and then delete
          let deletedAnimal = await req.model.Animal.findByIdAndDelete(req.params.id)
          console.log(deletedAnimal)
          // redirect back to the index
@@ -58,7 +58,7 @@ async function update(req, res) {
                 new: true
             }
         )
-        // redirect to the show route with the updated book
+        // redirect to the show route with the updated animal
         res.redirect(`/animals/${updatedAnimal._id}`)
     } catch (error) {
         res.send("something went wrong")
@@ -82,7 +82,7 @@ async function create(req, res) {
 }
 async function edit(req, res) {
     try {
-        //find the book and edit
+        //find the animal and edit
         let foundAnimal = await req.model.Animal.findById(req.params.id)
         res.render("edit.ejs", {
             animal: foundAnimal
@@ -107,10 +107,10 @@ async function seed(req, res) {
     }
 }
 async function show(req, res) {
-    // find book by _id
+    // find animal by _id
     let foundAnimal = await req.model.Animal.findById(req.params.id) // this is the request params object
     console.log(foundAnimal)
-    // render show.ejs with the found book
+    // render show.ejs with the found animal
     res.render("show.ejs", {
         animal: foundAnimal
     })

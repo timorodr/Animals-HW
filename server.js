@@ -7,6 +7,7 @@ const morgan = require("morgan")
 const methodOverride = require("method-override")
 const animalRouter = require("./routes/animals.js")
 
+
 const app = express()
 const PORT = process.env.PORT || 3013;
 const seedData = require("./models/seed.js")
@@ -33,6 +34,7 @@ app.use(morgan("dev"))
 app.use(express.urlencoded({extended: true})) // body parser this is how we get access to req.body
 app.use(methodOverride("_method")) // key word to pass to method override lets us use DELETE PUT HTTP verbs
 app.use("/public", express.static("public")) // this will serve up our public directory the url prefix of /public.styles.css
+
 
 //********* ROUTES */
 

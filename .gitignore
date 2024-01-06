@@ -1,2 +1,6 @@
 .env
 /node_modules
+/model/user.js
+/model
+/controllers/user.js
+
